@@ -29,7 +29,7 @@
   </parent>
 
   <artifactId>maven-ant-tasks</artifactId>
-  <version>2.1.4-pc-SNAPSHOT</version>
+  <version>2.1.4-SNAPSHOT</version>
 
   <name>Maven Ant Tasks</name>
   <description>Ant Tasks used for Maven integration</description>
@@ -109,11 +109,10 @@
   </mailingLists>
 
   <scm>
-    <connection>scm:git:https://github.com/PierceCountyWA/maven-ant-tasks.git</connection>
-    <developerConnection>scm:git:https://github.com/PierceCountyWA/maven-ant-tasks.git</developerConnection>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/ant-tasks/trunk</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/ant-tasks/trunk</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/ant-tasks/trunk</url>
   </scm>
-
-<!--
   <issueManagement>
     <system>jira</system>
     <url>https://issues.apache.org/jira/browse/MANTTASKS</url>
@@ -122,23 +121,17 @@
     <system>Jenkins</system>
     <url>https://builds.apache.org/job/maven-ant-tasks/</url>
   </ciManagement>
--->
-
   <distributionManagement>
-    <repository>
-      <id>releases</id>
-      <url>https://maven.co.pierce.wa.us/nexus/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <url>https://maven.co.pierce.wa.us/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
+    <site>
+      <id>apache.website</id>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/components/${maven.site.path}</url>
+    </site>
   </distributionManagement>
 
   <properties>
-    <currentReleaseVersion>2.1.4-pc-SNAPSHOT</currentReleaseVersion>
+    <currentReleaseVersion>2.1.3</currentReleaseVersion>
     <mavenVersion>2.2.1</mavenVersion>
-    <wagonVersion>2.9</wagonVersion>
+    <wagonVersion>1.0-beta-6</wagonVersion>
     <securityDispatcherVersion>1.3</securityDispatcherVersion>
     <maven.site.path>ant-tasks-archives/ant-tasks-LATEST</maven.site.path>
   </properties>
